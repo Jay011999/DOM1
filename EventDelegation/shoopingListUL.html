@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <style>
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="food">
+      <ul>
+        <li>
+          Meat
+          <ul>
+            <li>
+              Red Meat
+              <ul>
+                <li>Beaf</li>
+                <li>Pork</li>
+                <li>Lamb</li>
+              </ul>
+            </li>
+            <li>
+              Other Meat
+              <ul>
+                <li>Fish</li>
+                <li>Prawns</li>
+                <li>Chicken</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          Vegetables
+          <ul>
+            <li>
+              Seasonal
+              <ul>
+                <li>Cauli Flower</li>
+                <li>Carrot</li>
+                <li>Raddish</li>
+              </ul>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              EverGreen
+              <ul>
+                <li>Potatoes</li>
+                <li>Tomatoes</li>
+                <li>Brinjal</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <script>
+      let foodElement = document.getElementById("food");
+      foodElement.addEventListener("click", showorHide);
+      function showorHide(event) {
+        let liElement = event.target;
+        if (liElement.tagName == "LI") {
+          let ulElement = liElement.querySelector("ul");
+          if (ulElement) {
+            ulElement.classList.toggle("hide");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
