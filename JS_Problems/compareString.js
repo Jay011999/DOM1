@@ -16,6 +16,16 @@ function compareEndString(string1,string2){
 
   console.log(findIndex(arr,566));
 
+
+  //create a fnction that repeats each letter twice
+
+  function repeatDouble(string3){
+    let newStr3=String(string3);
+    return newStr3.split('').map(newStr3=>newStr3.repeat(2));
+  }
+
+  console.log(repeatDouble('abcdefghijk'));
+
   
 
 
