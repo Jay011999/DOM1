@@ -26,6 +26,25 @@ function compareEndString(string1,string2){
 
   console.log(repeatDouble('abcdefghijk'));
 
+  //function to repeat letters check
+function checkRepeatingLetters(array) {
+    let result = [];
+    array.forEach(string => {
+        let counts = {};
+        for (let i = 0; i < string.length; i++) {
+            let char = string.charAt(i);
+            counts[char] = (counts[char] || 0) + 1;
+        }
+        let repeats = Object.keys(counts).filter(key => counts[key] > 1);
+        if (repeats.length > 0) {
+            result.push({[string]: repeats});
+        }
+    });
+    return result;
+  }
+  let arrayNew=['asfdfd','gurvah','ppp']
+  console.log(checkRepeatingLetters(arrayNew));
+
   
 
 
